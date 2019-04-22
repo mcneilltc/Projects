@@ -40,8 +40,17 @@ render (){
     );
 }
 }
-
-Note.propTypes ={
-    title: PropTypes.string
-};
+addNote() {
+    TouchList.state.noets.push({
+        title: "New title",
+        body: "new note body"
+    })
+    this.setState(
+        {notes: this.state.notes
+        }
+    )
+}
+// Note.propTypes ={
+//     title: PropTypes.string
+// };
 export default Board;
