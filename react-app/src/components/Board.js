@@ -28,9 +28,12 @@ render (){
         <div>
             <div className = "div-board">
             <div className ="row" />
-            <Note />
-            <Note />
-            <Note />
+            {
+                this.state.notes.map(note => {
+                    return <Note title= {note.title} body =
+                    {note.body} />
+                })
+            }
             </div>
             <div>
                 <button className = "btn btn-success add-button"> Add </button>
