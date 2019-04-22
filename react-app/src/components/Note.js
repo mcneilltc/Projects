@@ -7,6 +7,9 @@ const GENERIC_NOTE_TITLE = "New Note Title", GENERIC_NOTE_BODY = "New Note Body"
     class Note extends React.Component{
     constructor(){
         super();
+        this.state = {
+            notes: []
+        };
     }
         componentWillMount(){  
         this.state = {

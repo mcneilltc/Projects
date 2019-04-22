@@ -1,6 +1,6 @@
 import React, {Component} from 'react'; 
 import "../css/Board.css";
-import Note from './Note.js'
+import Note from './Note'
 import PropTypes from 'prop-types';
 
 class Board extends Component{
