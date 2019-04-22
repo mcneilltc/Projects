@@ -1,13 +1,22 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import "../css/Note.css";
 
 
 
-//class Note extends Component{
     class Note extends React.Component{
     constructor(){
         super();
     }
+        componentWillMount(){  
+        this.state = {
+            title: this.props.title,
+            body: this.props.body,
+            editMode: false
+        }
+    }
+
+
     render(){
         return(
             <div className = "col-sm-4">
@@ -25,6 +34,7 @@ import "../css/Note.css";
         )
     }
 }
+
 Note.defaultProps={
     title: "a cool title",
     body: "a cool body",
