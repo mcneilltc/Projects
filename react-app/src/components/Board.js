@@ -41,14 +41,17 @@ render (){
 }
 }
 addNote() {
-    TouchList.state.noets.push({
+    this.state.notes.push(
+        {
         title: "New title",
         body: "new note body"
-    })
+    }
+    );
     this.setState(
-        {notes: this.state.notes
+        {
+            notes: this.state.notes
         }
-    )
+    );
 }
 // Note.propTypes ={
 //     title: PropTypes.string
