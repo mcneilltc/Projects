@@ -32,7 +32,7 @@ handleSave(){
     render(){
 let titleElement, bodyElement, buttonArea;
 if (this.state.editMode){
-    titleElement = <textarea ref = "titleContent" className = "title-textarea" defaultValue= {this.state.area}></textarea>;
+    titleElement = <textarea ref = "titleContent" className = "title-textarea" defaultValue= {this.state.title}></textarea>;
 bodyElement = <textarea ref = "bodyContent" className = "body-textarea" defaultValue = {this.state.body}></textarea>;
 buttonArea = <div><button className = "btn btn-info" onClick = {this.handleEdit.bind(this)}> Edit </button> </div>;
 } else {
