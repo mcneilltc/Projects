@@ -36,7 +36,7 @@ render (){
             }
             </div>
             <div>
-                <button className = "btn btn-success add-button"> Add </button>
+                <button className = "btn btn-success add-button" onClick = {this.addNote.bind(this)}> Add </button>
             </div>
         </div>
 
