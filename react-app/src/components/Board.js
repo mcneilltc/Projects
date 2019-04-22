@@ -5,22 +5,30 @@ import PropTypes from 'prop-types';
 
 class Board extends Component{
     constructor(){
-        super();
-        this.state = {
-            notes: [
+        
+        addNote(){
+            this.state.notes.push(
                 {
-                    title:"Class Notes", 
-                    body: "Use constructors when extending another class"
-                },
+               id: Date.now()
+            }
+            );
+            this.setState(
                 {
-                    title: "React Notes",
-                    body: "Everything in React is component"
-                },
-                {
-                    title: "My address",
-                     body: "Nunya"
+                    notes: this.state.notes
                 }
-            ]
+            );
+        }
+
+        deleteNote(id){
+            let newNoteArr = this.state.notes;
+            newNoteArr.map((note, index)=>{
+                if (id === note.id){
+                    newNoteArr.splice(index, 1);
+                }
+            });
+            this.setState(
+                {notes: newNoteArr}
+            );
         }
     }
 render (){
@@ -30,8 +38,7 @@ render (){
             <div className ="row" />
             {
                 this.state.notes.map(note => {
-                    return <Note title= {note.title} body =
-                    {note.body} />
+                    return <Note key ={note.id} title= {note.id} deleteHandler ={this.deleteNote.bind(this)}/>
                 })
             }
             </div>
@@ -43,19 +50,8 @@ render (){
     );
 }
 }
-addNote() {
-    this.state.notes.push(
-        {
-        title: "New title",
-        body: "new note body"
-    }
-    );
-    this.setState(
-        {
-            notes: this.state.notes
-        }
-    );
-}
+
+
 // Note.propTypes ={
 //     title: PropTypes.string
 // };
