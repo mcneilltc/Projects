@@ -60,3 +60,5 @@ addNote() {
 //     title: PropTypes.string
 // };
 export default Board;
+
+//this is just a test message to see if this has worked
