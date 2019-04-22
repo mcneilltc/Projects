@@ -16,8 +16,21 @@ import "../css/Note.css";
         }
     }
 
+handleEdit(){
+    this. setState({
+        editMode: true
+    });
+}
+handleSave(){
+    this.setState({
+        title: this.refs.titleContent.value,
+        body: this.refs.bodyContent.value,
+        editMode: false
 
+    });
+}
     render(){
+        
         return(
             <div className = "col-sm-4">
             <div className = "card card-view">
