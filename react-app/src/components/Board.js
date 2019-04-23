@@ -1,7 +1,7 @@
 import React, {Component} from 'react'; 
 import "../css/Board.css";
 import Note from './Note'
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
 class Board extends Component{
     constructor(){
@@ -57,4 +57,3 @@ render (){
 // };
 export default Board;
 
-//this is just a test message to see if this has worked
