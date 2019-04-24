@@ -9,30 +9,21 @@ class App extends React.Component {
   getUser = e => {
     e.preventDefault();
     const user = e.target.elements.username.value;
-axios.get('https://api.github.com/users/$%7Busername%7D"'){
-.then(function(username){
-  console.log(username);
-  // .catch(function(){
-  //   console.log();
-  });
+    axios.get(`https://api.github.com/users/${user}`).then(function(user) {
+      console.log(user);
+    });
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1 className="App-title">HTTP Requests in React</h1>
+          <UserForm getUser={this.getUser} />
+        </header>
+      </div>
+    );
+  }
 }
-}
-    
-
-
-  render(){
-  return (
-    <div className="App">
-      <header className="App-header">
-      <h1 className ="App-title" >HTTP Requests in React</h1>
-      <UserForm getUser= {this.getUser}/>
-      </header>
-     
-       
-      
-    </div>
-
-  );
-}}
 
 export default App;
