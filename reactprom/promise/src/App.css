@@ -8,13 +8,14 @@
   pointer-events: none;
 }
 
+
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100vh;/* vh = view height where 100 equals the entire viewing area*/
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -23,11 +24,11 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */
