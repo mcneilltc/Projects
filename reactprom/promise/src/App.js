@@ -9,8 +9,8 @@ class App extends React.Component {
   getUser = e => {
     e.preventDefault();
     const user = e.target.elements.username.value;
-    axios.get(`https://api.github.com/users/${user}`).then(function(user) {
-      console.log(user);
+    axios.get(`https://api.github.com/users/${user}`).then(function(username) {
+      console.log(username);
     });
   };
 
